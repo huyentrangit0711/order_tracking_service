@@ -1,0 +1,32 @@
+[
+  {
+    "order_status_id": 0,
+    "order_status_name": "Canceled",
+    "order_status_description": "Canceled between created and done by operator"
+  },
+  {
+    "order_status_id": 1,
+    "order_status_name": "created",
+    "order_status_description": "Customer create order"
+  },
+  {
+    "order_status_id": 2,
+    "order_status_name": "Accepted",
+    "order_status_description": "Merchant accepted order"
+  },
+  {
+    "order_status_id": 3,
+    "order_status_name": "DriverAssigned",
+    "order_status_description": "Driver is assigned"
+  },
+  {
+    "order_status_id": 4,
+    "order_status_name": "Delivering",
+    "order_status_description": "Driver is delivering food"
+  },
+  {
+    "order_status_id": 5,
+    "order_status_name": "Done",
+    "order_status_description": "Customer get order"
+  }
+]
