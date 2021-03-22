@@ -1,16 +1,20 @@
 import {ORDER_FAIL, ORDER_LOADING, ORDER_SUCCESS, OrderDispatchTypes} from "./OrderActionTypes";
 import {Dispatch} from "redux";
-import API from '../api'
+import API, {getOrdersLength} from '../api'
 /// define action getOrders
-export const GetOrders = () => async (dispatch:Dispatch<OrderDispatchTypes>) => {
+export const GetOrders = (page:number = 1, limit:number =5) => async (dispatch:Dispatch<OrderDispatchTypes>) => {
     try {
         dispatch({
             type: ORDER_LOADING
         })
-        const response = await API.get('orders')
+        const response = await API.get(`orders?_page=${page}&_limit=${limit}`)
+        const totalResults = await API.get(`orders`)
+        console.log('debug', totalResults)
         dispatch({
             type: ORDER_SUCCESS,
-            payload: response.data
+            payload: response.data,
+            page,
+            totalResults: totalResults.data.length
         })
     }
     catch (e) {

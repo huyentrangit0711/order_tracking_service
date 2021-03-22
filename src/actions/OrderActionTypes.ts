@@ -27,6 +27,8 @@ export interface OrderFail {
 
 export interface OrderSuccess {
     type: typeof ORDER_SUCCESS,
-    payload: Array<OrderType>
+    payload: Array<OrderType>,
+    page: number,
+    totalResults: number
 }
 export type OrderDispatchTypes = OrderLoading | OrderFail | OrderSuccess

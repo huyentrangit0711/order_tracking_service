@@ -1,12 +1,16 @@
 import React from "react";
 import { OrderType } from '../actions/OrderActionTypes'
-import OrderPagination from './OrderPagination'
+import { PaginationContainer } from './PaginationContainer'
+import { getOrdersLength } from '../api'
+import {useSelector} from "react-redux";
+import {RootStore} from "../Store";
 interface OrderItemProps {
     ordersList: Array<OrderType>
 }
 const OrderTable = (props: OrderItemProps) => {
-    const totalResults :number = props.ordersList.length
     const pageLimits :number = 5
+    const totalResults = useSelector((state:RootStore) => state.order).totalResults
+
     return (
         <div className="order__table">
             <table className="table">
@@ -55,7 +59,7 @@ const OrderTable = (props: OrderItemProps) => {
 
                 </tbody>
             </table>
-            <OrderPagination totalResults={totalResults} pageLimits={pageLimits}/>
+            {totalResults && <PaginationContainer totalPages={Math.ceil(totalResults/pageLimits)}/>}
         </div>
     )
 }

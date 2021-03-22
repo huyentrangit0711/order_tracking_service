@@ -7,7 +7,9 @@ import {
 } from "../actions/OrderActionTypes";
 interface IOrderState {
     loading: boolean,
-    orders ?: Array<OrderType>
+    orders ?: Array<OrderType>,
+    page?: number,
+    totalResults?: number
 }
 const initialState: IOrderState = {
     loading: false,
@@ -29,7 +31,9 @@ const orderReducer = (
         case ORDER_SUCCESS:
             return {
                 loading: false,
-                orders: action.payload
+                orders: action.payload,
+                page: action.page,
+                totalResults: action.totalResults
             }
     }
     return state

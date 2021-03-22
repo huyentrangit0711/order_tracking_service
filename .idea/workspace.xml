@@ -2,8 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e3dea61f-2492-4173-855b-e66111c0b207" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Pagination.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/PaginationContainer.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/actions/OrderAction.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/OrderAction.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/actions/OrderActionTypes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/OrderActionTypes.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/api.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/OrderTable.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/OrderTable.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/reducers/OrderReducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducers/OrderReducer.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utinities/orderTransform.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/utinities/orderTransform.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,10 +57,22 @@
       <option name="presentableId" value="Default" />
       <updated>1616257834541</updated>
       <workItem from="1616257835783" duration="26027000" />
+      <workItem from="1616380109615" duration="10485000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

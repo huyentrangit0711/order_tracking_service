@@ -22,3 +22,14 @@ export const orderStatusTransformFromAPI = (orderStatus: number)  => {
     return OrderStatus
         .filter((order: {order_status_id: number, order_status_name: string, order_status_description ?: string }) => order.order_status_id === orderStatus)
 }
+export const range = (from: number, to: number, step = 1) => {
+    let i = from;
+    const range = [];
+
+    while (i <= to) {
+        range.push(i);
+        i += step;
+    }
+
+    return range;
+}
