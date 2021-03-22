@@ -2,6 +2,7 @@ import React from "react";
 import { OrderType } from '../actions/OrderActionTypes'
 import { PaginationContainer } from './PaginationContainer'
 import { getOrdersLength } from '../api'
+import Filter from './Filter'
 import {useSelector} from "react-redux";
 import {RootStore} from "../Store";
 interface OrderItemProps {
@@ -13,6 +14,7 @@ const OrderTable = (props: OrderItemProps) => {
 
     return (
         <div className="order__table">
+            <Filter />
             <table className="table">
                 <thead className="thead-dark">
                 <tr>
