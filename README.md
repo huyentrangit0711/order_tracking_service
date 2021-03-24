@@ -5,7 +5,8 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ## Available Scripts
 
 In the project directory, you can run:
-
+### `json-server --watch src/mock/mock.json --port 3001`
+Run Mock API for orders, make sure you have json-server globally install
 ### `yarn start`
 
 Runs the app in the development mode.\

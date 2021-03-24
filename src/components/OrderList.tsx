@@ -14,8 +14,6 @@ const OrderList = (props: OrderListProps) => {
 
             }
 
-                {orders && orders.length}
-
         </div>
 
     )

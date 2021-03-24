@@ -58,8 +58,9 @@ const Filter = () => {
                    onChange={(event) => setKeyWord(event.target.value)}
                    aria-describedby="basic-addon1"/>
             <div className="form-floating my-4 d-flex flex-row justify-content-between">
-                {filterButtons.map((filterButton) => {
+                {filterButtons.map((filterButton, index) => {
                     return <ButtonElement
+                        key={index}
                         buttonText={filterButton.text}
                         buttonId={filterButton.id}
                         isActive={appliedFilters && isActiveButton(filterButton.id)}
