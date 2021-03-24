@@ -9,9 +9,16 @@ import OrderStatus from '../mock/orderstatus.json'
 import ButtonElement from "./ButtonElement";
 const Filter = () => {
     const [keyword, setKeyWord ] = useState('')
+    const [activeFilter, setActiveFilter ] = useState('')
     const dispatch = useDispatch()
     const appliedFilters = useSelector((state:RootStore) => state.order).appliedFilters
-    const handleClick = (event: React.MouseEvent) => {
+    // const activeButton = (id: string, appliedFilters: Array<OrderFilter>) => {
+    //     const activeButton = appliedFilters.filter((filter) => {
+    //         return filter.filterName === id
+    //     })
+    //     return activeButton
+    // }
+    const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
         event.preventDefault()
         const filters: Array<OrderFilter> = [{
             filterName: event.currentTarget.id,
@@ -62,7 +69,7 @@ const Filter = () => {
                 <SelectElement options={orderStatusOptions}
                                defaultOption={'Status'}
                                handleSelect={handleFilterStatus} />
-                {/*               Filter updated time*/}
+
                 <SelectElement options={filterUpdatedTimeOptions}
                                defaultOption={'Updated time'}
                                handleSelect={handleFilterUpdatedTime} />

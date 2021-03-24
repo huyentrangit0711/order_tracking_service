@@ -2,17 +2,30 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e3dea61f-2492-4173-855b-e66111c0b207" name="Default Changelist" comment="">
+<<<<<<< HEAD
+=======
+      <change afterPath="$PROJECT_DIR$/src/components/EmptyResults.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/SelectElement.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/TotalOrder.tsx" afterDir="false" />
+>>>>>>> a8cac45c09fa7a65914a989eea3765161099f273
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/actions/OrderAction.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/OrderAction.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/actions/OrderActionTypes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/OrderActionTypes.ts" afterDir="false" />
+<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/src/components/Filter.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Filter.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/OrderList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/OrderList.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/OrderTable.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/OrderTable.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Pagination.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Pagination.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/PaginationContainer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PaginationContainer.tsx" afterDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/src/api.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/api.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/OrderList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/OrderList.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/OrderPagination.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/OrderTable.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/OrderTable.tsx" afterDir="false" />
+>>>>>>> a8cac45c09fa7a65914a989eea3765161099f273
       <change beforePath="$PROJECT_DIR$/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/mock/mock.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/mock/mock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/mock/orderstatus.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/mock/orderstatus.json" afterDir="false" />
@@ -69,8 +82,13 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1616257834541</updated>
+<<<<<<< HEAD
       <workItem from="1616257835783" duration="26027000" />
       <workItem from="1616380109615" duration="30385000" />
+=======
+      <workItem from="1616257835783" duration="27493000" />
+      <workItem from="1616413199507" duration="20672000" />
+>>>>>>> a8cac45c09fa7a65914a989eea3765161099f273
     </task>
     <servers />
   </component>

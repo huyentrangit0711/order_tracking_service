@@ -46,6 +46,12 @@ const orderReducer = (
                 const { filterValue, filterName } = filterConfig
                 return state.orders && filterByFieldName(state.orders, filterName, filterValue)
             })
+<<<<<<< HEAD
+=======
+            // console.log('debug123', state.orders &&
+            //     filterByFieldName(state.orders, 'filter_updatedTime', '5'))
+            console.log('filterData', filterData)
+>>>>>>> a8cac45c09fa7a65914a989eea3765161099f273
             return {
                 loading: false,
                 orders: filterData[0],
