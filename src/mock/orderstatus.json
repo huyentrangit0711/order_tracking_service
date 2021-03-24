@@ -6,7 +6,7 @@
   },
   {
     "order_status_id": 1,
-    "order_status_name": "created",
+    "order_status_name": "Created",
     "order_status_description": "Customer create order"
   },
   {
@@ -30,3 +30,4 @@
     "order_status_description": "Customer get order"
   }
 ]
+

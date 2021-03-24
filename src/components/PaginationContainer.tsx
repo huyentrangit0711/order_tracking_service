@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Pagination } from './Pagination';
 import {useDispatch, useSelector} from "react-redux";
 import { GetOrders } from "../actions/OrderAction";
@@ -10,9 +10,10 @@ export interface Props {
 export const PaginationContainer = (props: Props) => {
     const dispatch = useDispatch()
     const orderState = useSelector((state:RootStore) => state.order)
+    const appliedFilters = orderState.appliedFilters
     const totalPages = props.totalPages;
     const handlePages = (updatePage: number) => {
-        dispatch(GetOrders(updatePage))
+        dispatch(GetOrders(appliedFilters,updatePage))
     }
     return (
         <div className="container">

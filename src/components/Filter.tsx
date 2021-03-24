@@ -1,37 +1,73 @@
-import React from "react";
-// import { OrderType } from '../actions/OrderActionTypes'
-// interface OrderItemProps {
-//     details: OrderType
-// }
-// type CardProps = {
-//     title: string,
-//     paragraph: string
-// }
-//
-// export const Card = ({ title, paragraph }: CardProps) => <aside>
-//     <h2>{ title }</h2>
-//     <p>
-//         { paragraph }
-//     </p>
-// </aside>
-// id
-// status
-// customer name
-// merchant name
-// updated time, last 5, last 10, last 15 min
+import React, { useState } from "react";
+import { useDispatch } from "react-redux"
+import { GetOrders } from "../actions/OrderAction";
+import { OrderFilter, filterUpdatedTimeOptions, filterButtons } from '../actions/OrderActionTypes'
+import SelectElement from './SelectElement'
+import {useSelector} from "react-redux"
+import {RootStore} from "../Store";
+import OrderStatus from '../mock/orderstatus.json'
+import ButtonElement from "./ButtonElement";
 const Filter = () => {
+    const [keyword, setKeyWord ] = useState('')
+    const dispatch = useDispatch()
+    const appliedFilters = useSelector((state:RootStore) => state.order).appliedFilters
+    const handleClick = (event: React.MouseEvent) => {
+        event.preventDefault()
+        const filters: Array<OrderFilter> = [{
+            filterName: event.currentTarget.id,
+            filterValue: keyword
+        }]
+        dispatch(GetOrders(filters))
+    }
+    const isActiveButton = (filedId: string) => {
+        const isExistFilter = appliedFilters && appliedFilters.filter((filter) => {
+            return filter.filterName === filedId
+        })
+        return isExistFilter && isExistFilter.length > 0
+    }
+    const handleFilterStatus = (option: string) => {
+        const filters: Array<OrderFilter> = [{
+            filterName: 'filter_status',
+            filterValue: option
+        }]
+        dispatch(GetOrders(filters))
+    }
+    const handleFilterUpdatedTime = (option: string) => {
+        const filters: Array<OrderFilter> = [{
+            filterName: 'filter_updatedTime',
+            filterValue: option
+        }]
+        dispatch(GetOrders(filters))
+    }
+    const orderStatusOptions = OrderStatus.map((orderStatus) => {
+        return {
+            value: orderStatus.order_status_name,
+            text: orderStatus.order_status_name
+        }
+    })
     return (
         <div className="order__filter">
-            <select className="form-select" aria-label="Default select example">
-                <option selected>Open this select menu</option>
-                <option value="id">ID</option>
-                <option value="status">Status</option>
-                <option value="customer_name">Customer name</option>
-                <option value="merchant_name">Merchant name</option>
-                <option value="updated_time">Updated time</option>
-            </select>
-            <input type="text" className="form-control" placeholder="ID" aria-label="ID"
+            <input type="text" className="form-control my-4" placeholder="Search keyword" aria-label="ID"
+                   onChange={(event) => setKeyWord(event.target.value)}
                    aria-describedby="basic-addon1"/>
+            <div className="form-floating my-4 d-flex flex-row justify-content-between">
+                {filterButtons.map((filterButton) => {
+                    return <ButtonElement
+                        buttonText={filterButton.text}
+                        buttonId={filterButton.id}
+                        isActive={appliedFilters && isActiveButton(filterButton.id)}
+                        isHidden={keyword.length === 0}
+                        handleClick={handleClick}/>
+                })}
+                <SelectElement options={orderStatusOptions}
+                               defaultOption={'Status'}
+                               handleSelect={handleFilterStatus} />
+                {/*               Filter updated time*/}
+                <SelectElement options={filterUpdatedTimeOptions}
+                               defaultOption={'Updated time'}
+                               handleSelect={handleFilterUpdatedTime} />
+            </div>
+
         </div>
     )
 }

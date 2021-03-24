@@ -1,7 +1,6 @@
 import React from "react";
 import {useSelector} from "react-redux";
 import {RootStore} from "../Store";
-import OrderItem from "./OrderItem";
 import OrderTable from "./OrderTable";
 interface OrderListProps {}
 

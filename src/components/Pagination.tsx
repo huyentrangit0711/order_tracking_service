@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import {range} from '../utinities/orderTransform'
 export interface Props {
     currentPage: number;
@@ -11,7 +11,6 @@ export const PaginationComponent: React.FC<Props> = ({
                                                          handlePagination,
                                                      }) => {
     const paginationArr = range(1, totalPages)
-    console.log('paginationArr', paginationArr)
     return (
 
         <div>

@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react';
-import logo from './logo.svg';
 import './App.css';
 import { useDispatch } from "react-redux"
 import { GetOrders } from "./actions/OrderAction";
